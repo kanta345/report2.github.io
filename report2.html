@@ -32,10 +32,11 @@ var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 sphere.position.set( 0, 0, -5 );
 scene.add( sphere );
   
-// 平行光源を生成
-var light = new THREE.DirectionalLight(0xffffff);
-light.position.set(1, 1, 1);
-scene.add(light);
+// 平行光源
+var directionalLight = new THREE.DirectionalLight(0xffffff);
+directionalLight.position.set(1, 1, 1);
+// シーンに追加
+scene.add(directionalLight);
   
 // 描画
 renderer.render(scene, camera);
