@@ -32,6 +32,12 @@ var init = function() {
   box.position.z = -5;
   scene.add(box);
   
+  //球
+  var sphereGeometry = new THREE.SphereGeometry( 0.8, 39, 39 ); 
+  var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x6699ff,wireframe: true} );
+  var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+  sphere.position.set( 0, 0, -5 );
+  scene.add( sphere );
   
   // 平行光源を生成
   var light = new THREE.DirectionalLight(0xffffff);
