@@ -23,20 +23,19 @@ document.body.appendChild(renderer.domElement);
 var scene = new THREE.Scene();
 
 //カメラを作成
-var camera = new THREE.PerspectiveCamera(45,1200/800,1,1000);
+var camera = new THREE.PerspectiveCamera(45,800/600,1,1000);
   
 // 箱を作成
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+var material = new THREE.MeshPhongMaterial({color: 0x0000ff});
 var box = new THREE.Mesh(geometry, material);
 box.position.z = -5;
 scene.add(box);
   
 // 平行光源
 var directionalLight = new THREE.DirectionalLight(0xffffff);
-directionalLight.position.set(1, 1, 1);
-// シーンに追加
-scene.add(directionalLight);
+light.position.set(1, 1, 1);
+scene.add(light);
   
 // 描画
 renderer.render(scene, camera);
