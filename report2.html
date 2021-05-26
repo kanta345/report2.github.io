@@ -40,14 +40,14 @@ var init = function() {
   scene.add( sphere );
   
   //ドーナッツ
-  var torusGeometry = new THREE.TorusGeometry( 0.8, 0.4, 6, 12 ); 
+  var torusGeometry = new THREE.TorusGeometry( 1.4, 0.8, 6, 12 ); 
   var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x8794a1 } );
   var torus = new THREE.Mesh( torusGeometry, torusMaterial );
   torus.position.set( 0, 0, -5);
   scene.add( torus );
   
   //トーラスノット
-  var torusKnotGeometry = new THREE.TorusKnotGeometry( 1.5, 0.3, 20, 6, 3, 2 ); 
+  var torusKnotGeometry = new THREE.TorusKnotGeometry( 3.0, 1.3, 40, 6, 3, 2 ); 
   var torusKnotMaterial = new THREE. MeshPhongMaterial( { color: 0x6472fa, wireframe: true } );
   var torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
   torusKnot.position.set( 0, 0, -15 );
